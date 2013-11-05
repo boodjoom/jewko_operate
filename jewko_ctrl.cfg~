@@ -1,0 +1,45 @@
+driver
+(
+  name "passthrough"
+  provides "6665:speech:0"
+  requires "192.168.88.188:6665:speech:0"
+)
+
+
+#driver
+#(
+#    name "running_text"
+#    port "/dev/ttyUSB0"
+#    plugin "/home/shark/QT_project/runnig_text_driver/librunning_text-driver.so"
+#    provides ["speech:2"]
+#)
+
+driver
+(
+  name "linuxjoystick"
+  provides ["joystick:0"]
+  #requires ["position2d:0"]
+  port "/dev/input/js0"
+  alwayson 1
+)
+
+driver
+(
+  name "passthrough"
+  provides "6665:dio:0"
+  requires "192.168.88.188:6665:dio:0"
+)
+
+driver
+(
+  name "passthrough"
+  provides "6665:camera:0"
+  requires "192.168.88.188:6665:camera:0"
+)
+
+driver
+(
+  name "passthrough"
+  provides "6665:camera:1"
+  requires "192.168.88.188:6665:camera:4"
+)
