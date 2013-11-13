@@ -1,7 +1,8 @@
 #!/bin/bash
-killall player
 killall playercam
-killall python
+killall player
+#killall python
+killall jewko_control
 sleep 2
 #killall playerv
 #killall irobex_controll
